@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+  /* border: 1px solid gray; */
+}
+
+
+@font-face {
+  font-family: Digital;
+  src: url(font/digital-7.ttf);
+  /* font-weight: bold;    */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: Casio;
+  src: url(font/ncc1701a.ttf);
+  /* font-weight: bold;    */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: Casio2;
+  src: url(./font/webfonts_Imaki-Italic/Imaki-Italic.ttf.woff);
+  /* font-weight: bold;    */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: Imaki-Italic;
+  src: url() format("woff"),
+    url("./font/webfonts_Imaki-Italic/Imaki-Italic.ttf.svg") format("svg"),
+    url("./font/webfonts_Imaki-Italic/Imaki-Italic.ttf.eot"),
+    url("./font/webfonts_Imaki-Italic/Imaki-Italic.ttf.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* width: min(100% 150px) ; */
+  /* margin: 10px auto; */
+  max-width: 480px;
+  margin: 25px;
+  padding: 12px 10px;
+  /* display: grid; */
+  /* grid: auto 90px 400px / 3fr 1fr; */
+  border: 2px solid rgb(227, 223, 223);
+  border-radius: 10px;
+  background-color: rgb(237, 237, 236);
+  box-shadow: 0 0 25px grey;
+
+}
+
+.infoSolar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+
+}
+
+.casio {
+  font-family: Casio2;
+  margin-bottom: 10px;
+}
+
+
+.naturalDisplay {
+  font-family: Imaki-Italic, Times, serif;
+  font-size: medium;
+  text-align: center;
+
+}
+
+
+.solarPanelDiv {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  align-items: end;
+
+}
+
+.solarPanel {
+  width: 100%;
+}
+
+.screen {
+  font-family: Digital, sans-serif;
+  font-size: 60px;
+  text-align: end;
+  margin: 10px auto;
+  background-color: rgb(227, 223, 223);
+  border: 2px solid rgb(86, 85, 85);
+  padding: 10px;
+  width: 100%;
+}
+
+#screenDiv {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 99px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.numbers {
+  /* width: 370px; */
+  /* height: 300px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+}
+
+.w100 {
+  width: 100%;
+}
+
+.numberBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5px; */
+  flex-grow: 1;
+  /* text-align: center; */
+  font-size: 30px;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+
+  background: linear-gradient(180deg,
+      #e6e6e6 0%,
+      rgba(0, 0, 0, 0.25) 30%,
+      rgba(38, 38, 38, 0.6) 71%,
+      rgba(0, 0, 0, 0.25) 100%);
+}
+
+.numberBtn:active {
+  transform: translate(2px, 2px);
+  /* -webkit-transform: translate(2px); */
+}
+
+.numberBtn>img {
+  width: 2rem;
+}
+
+
+/* .operators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-left: 15px;
+
+} */
+
+
+@media (width < 500px) {
+  .infoSolar {
+    font-size: small !important;
+  }
+  .numberBtn {
+    width: 5vh;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    font-size: 25px !important;
+  }
+
+  .numberBtn>img {
+    width: 5vw;
+  }
+ .solarPanel {
+  width: 35vw;
+
+}
+.numbers {
+  gap: 5px !important;
+}
+}
